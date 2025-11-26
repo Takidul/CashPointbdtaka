@@ -1,0 +1,22 @@
+body {
+  font-family: Arial;
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+#txnList {
+  background: white;
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.txn-box {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #0a84ff;
+  background: #fafafa;
+}

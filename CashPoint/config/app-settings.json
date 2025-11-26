@@ -1,0 +1,15 @@
+{
+  "appName": "My Telegram Mini App",
+  "version": "1.0.0",
+  "environment": "production",
+  "apiBaseUrl": "https://your-backend-domain.com/api",
+  "cdnBaseUrl": "https://yourcdn.com/assets",
+  "enableAds": true,
+  "defaultLanguage": "bn",
+  "supportedLanguages": ["en", "bn"],
+  "enableFirebase": true,
+  "meta": {
+    "developer": "Takidul Islam",
+    "github": "https://github.com/your-profile"
+  }
+}

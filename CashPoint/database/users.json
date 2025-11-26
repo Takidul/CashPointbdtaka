@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "uid": "user_001",
+      "name": "Md Takidul Islam",
+      "username": "takidul",
+      "coins": 120,
+      "totalEarned": 250,
+      "joinedAt": "2025-02-01T10:00:00Z",
+      "referrals": 3,
+      "withdrawHistory": [
+        {
+          "id": "wd_001",
+          "amount": 100,
+          "method": "Bkash",
+          "status": "paid",
+          "date": "2025-02-15"
+        }
+      ]
+    }
+  ]
+}

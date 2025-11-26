@@ -1,0 +1,12 @@
+{
+  "admins": [
+    {
+      "id": "admin_001",
+      "name": "Super Admin",
+      "email": "admin@example.com",
+      "password": "123456", 
+      "role": "superadmin",
+      "createdAt": "2025-01-01T00:00:00Z"
+    }
+  ]
+}

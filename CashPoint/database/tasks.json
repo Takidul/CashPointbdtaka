@@ -1,0 +1,20 @@
+{
+  "tasks": [
+    {
+      "id": "task_001",
+      "title": "Watch a short video",
+      "description": "Watch the monetage rewarded video to earn 5 coins.",
+      "reward": 5,
+      "type": "video",
+      "status": "active"
+    },
+    {
+      "id": "task_002",
+      "title": "Daily Check-in",
+      "description": "Come back once every day to claim a daily reward.",
+      "reward": 10,
+      "type": "daily",
+      "status": "active"
+    }
+  ]
+}

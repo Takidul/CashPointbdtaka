@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+
+    <!-- Main Admin CSS -->
+    <link rel="stylesheet" href="admin.css" />
+
+    <!-- Telegram Mini App Script -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+
+        <div class="section">
+            <h2>Add User Balance</h2>
+            <input type="text" id="userId" placeholder="Enter User ID" />
+            <input type="number" id="amount" placeholder="Amount" />
+            <button onclick="addBalance()">Add Balance</button>
+        </div>
+
+        <div class="section">
+            <h2>Deduct Balance</h2>
+            <input type="text" id="userIdDeduct" placeholder="Enter User ID" />
+            <input type="number" id="amountDeduct" placeholder="Amount" />
+            <button onclick="deductBalance()">Deduct Balance</button>
+        </div>
+
+        <div class="section">
+            <h2>View All Users</h2>
+            <button onclick="loadUsers()">Load Users</button>
+            <pre id="userList"></pre>
+        </div>
+    </div>
+
+    <!-- Admin Script -->
+    <script src="admin.js"></script>
+</body>
+</html>

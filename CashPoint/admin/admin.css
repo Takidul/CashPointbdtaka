@@ -1,0 +1,98 @@
+/* ============================
+   ADMIN PANEL STYLES
+===============================*/
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background */
+body {
+    background: #f0f2f5;
+    padding: 20px;
+}
+
+/* Admin Box */
+.admin-container {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.admin-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Style */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: #444;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #4a8cff;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #4a8cff;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #3b76db;
+}
+
+/* Success Message */
+.success-msg {
+    padding: 10px;
+    background: #d4ffd9;
+    color: #0b8a25;
+    border-left: 4px solid #0b8a25;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    display: none;
+}
+
+/* Error Message */
+.error-msg {
+    padding: 10px;
+    background: #ffd4d4;
+    color: #b30000;
+    border-left: 4px solid #b30000;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    display: none;
+}

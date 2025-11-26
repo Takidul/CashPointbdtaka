@@ -1,0 +1,252 @@
+/* File: styles/user.css
+   Purpose: Shared styles for User Panel (dashboard, profile, withdraw, tasks, etc.)
+   Light, modern, responsive layout with simple utility classes.
+*/
+
+/* --------------- Reset & Base ---------------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f5f7fb;
+  color: #1f2937;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 80px; /* space for fixed footer if used */
+}
+
+/* --------------- Layout Containers ---------------- */
+.container {
+  width: 92%;
+  max-width: 1080px;
+  margin: 20px auto;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(22, 27, 34, 0.06);
+  margin-bottom: 16px;
+}
+
+/* Small card (compact) */
+.card-sm {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* --------------- Header / Navbar ---------------- */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #ffffff;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand .logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.brand .title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+/* header actions */
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* --------------- Grid / Utilities ---------------- */
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.col-1 { flex: 1 1 100%; }    /* default single column */
+@media(min-width: 768px) {
+  .col-2 { flex: 1 1 calc(50% - 12px); }
+  .col-3 { flex: 1 1 calc(33.333% - 12px); }
+}
+
+/* spacing helpers */
+.mt-8 { margin-top: 8px; }
+.mt-12 { margin-top: 12px; }
+.mb-12 { margin-bottom: 12px; }
+
+/* --------------- Typography ---------------- */
+.h1 { font-size: 20px; font-weight: 700; color: #0f172a; }
+.h2 { font-size: 16px; font-weight: 600; color: #111827; }
+
+/* --------------- Buttons ---------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform .06s ease, box-shadow .08s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg,#2563eb,#1e40af);
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(37,99,235,0.18);
+}
+.btn-primary:hover { transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(15,23,42,0.08);
+  color: #0f172a;
+}
+
+/* small button */
+.btn-sm { padding: 8px 10px; font-size: 14px; border-radius: 8px; }
+
+/* disabled */
+.btn[disabled], .btn.disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --------------- Form Elements ---------------- */
+.input, input[type="text"], input[type="number"], input[type="password"], select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(15,23,42,0.06);
+  background: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow .08s ease, border-color .08s ease;
+}
+
+.input:focus, input:focus, select:focus, textarea:focus {
+  box-shadow: 0 6px 18px rgba(59,130,246,0.08);
+  border-color: rgba(59,130,246,0.9);
+}
+
+/* label */
+.form-label {
+  display:block;
+  font-weight:600;
+  font-size: 14px;
+  color:#0f172a;
+  margin-bottom: 6px;
+}
+
+/* form row */
+.form-row { margin-bottom: 12px; }
+
+/* --------------- Task list / cards ---------------- */
+.task-list { display: grid; gap: 12px; }
+.task-item {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid rgba(15,23,42,0.04);
+  background: #fff;
+}
+.task-item .meta { font-size: 13px; color:#475569; }
+.task-item .reward {
+  margin-left: auto;
+  font-weight:700;
+  color:#0f172a;
+}
+
+/* --------------- Balance / Wallet ---------------- */
+.balance {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.balance .amount {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0b1220;
+}
+.balance .sub {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* --------------- Notifications / badges ---------------- */
+.badge {
+  display:inline-block;
+  padding:4px 8px;
+  border-radius:999px;
+  background:#eef2ff;
+  color:#1e3a8a;
+  font-weight:700;
+  font-size:12px;
+}
+
+/* --------------- Footer (optional fixed) ---------------- */
+.app-footer {
+  width:100%;
+  position:fixed;
+  bottom:0;
+  left:0;
+  background:#fff;
+  border-top:1px solid rgba(15,23,42,0.04);
+  padding:10px 16px;
+  text-align:center;
+  z-index:50;
+}
+
+/* --------------- Empty / Placeholder ---------------- */
+.empty {
+  text-align:center;
+  color:#94a3b8;
+  padding:36px 12px;
+}
+
+/* --------------- Utilities ---------------- */
+.text-muted { color:#64748b; }
+.text-center { text-align:center; }
+.flex { display:flex; }
+.center { display:flex; align-items:center; justify-content:center; }
+
+/* --------------- Responsive tweaks ---------------- */
+@media (max-width: 600px) {
+  .brand .title { font-size:16px; }
+  .menu-grid { grid-template-columns: 1fr; }
+  .container { width: 95%; }
+  .app-header { padding: 10px; }
+}
+
+/* --------------- Example helper classes for task-card/component includes --------------- */
+/* If you use the task-card component provided earlier, these help layout it inside pages */
+.task-card-wrap { display:flex; flex-direction:column; gap:8px; }
+.task-card-wrap .task-card { width:100%; }
+
+/* --------------- End of file ---------------- */

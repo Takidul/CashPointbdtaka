@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dashboard-container {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .balance-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            margin-bottom: 20px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .menu-item {
+            background: white;
+            padding: 18px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background: #e8f0fe;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <h2>User Dashboard</h2>
+
+        <div class="balance-card">
+            <h3>Total Balance</h3>
+            <p id="balanceAmount">Loading...</p>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-item" onclick="goTo('withdraw.html')">Withdraw</div>
+            <div class="menu-item" onclick="goTo('profile.html')">Profile</div>
+            <div class="menu-item" onclick="goTo('settings.html')">Settings</div>
+            <div class="menu-item" onclick="goTo('support.html')">Support</div>
+        </div>
+    </div>
+
+    <script>
+        // For moving to another page
+        function goTo(page) {
+            window.location.href = page;
+        }
+
+        // Example balance fetch (Firebase হবে পরে)
+        document.getElementById("balanceAmount").innerText = "৳ 0.00";
+    </script>
+
+</body>
+</html>
